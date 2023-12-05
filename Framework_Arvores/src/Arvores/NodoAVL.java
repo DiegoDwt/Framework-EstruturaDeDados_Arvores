@@ -4,6 +4,12 @@ import java.util.LinkedList;
 import java.util.NoSuchElementException;
 import java.util.Queue;
 
+/**
+ * Classe para representar um nó em uma árvore AVL.
+ *
+ * @author Diego Dal Witt
+ * @version 1.0
+ */
 public class NodoAVL implements Nodo {
     private int dado, altd, alte, ocorrencias; 
     private Nodo dir, esq;
@@ -63,6 +69,12 @@ public class NodoAVL implements Nodo {
 		this.esq = esq;
 	}
     
+	
+	/**
+	   * Adiciona um novo nó à árvore AVL.
+	   *
+	   * @param nodo o novo nó a ser adicionado
+	   */
 	@Override
 	public void addNodo(Nodo nodo) {
 	   if (nodo == null) {
@@ -161,6 +173,11 @@ public class NodoAVL implements Nodo {
 	   return aux;
 	}
 
+	/**
+	   * Remove um nó da árvore AVL.
+	   *
+	   * @param nodo o nó a ser removido
+	   */
 	@Override
 	public void removeNodo(Nodo nodo) {
 	   if (nodo == null) {
@@ -269,7 +286,7 @@ public class NodoAVL implements Nodo {
 		      node.getDir().setDir(newNode.getDir());
 		  }
 		}
-
+	
 	@Override
 	public Nodo getNodo(int index) {
 	   if (index < 0) {
@@ -298,5 +315,6 @@ public class NodoAVL implements Nodo {
 
 	   throw new NoSuchElementException("Índice fora do intervalo");
 	}
-    
+
+
 }

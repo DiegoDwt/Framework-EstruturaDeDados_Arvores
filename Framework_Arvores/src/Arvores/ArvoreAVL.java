@@ -1,17 +1,37 @@
 package Arvores;
 
+/**
+ * Classe para representar uma árvore AVL.
+ *
+ * @author Diego Dal Witt
+ * @version 1.0
+ */
 public class ArvoreAVL implements Arvore {
     private NodoAVL raiz;
 
+    /**
+     * Construtor para criar uma nova árvore AVL.
+     */
     public ArvoreAVL() {
         raiz = null;
     }
 
+    /**
+     * Insere um novo nó na árvore AVL com a chave fornecida.
+     *
+     * @param chave a chave do novo nó
+     */
     @Override
     public void inserir(int chave) {
         raiz = inserirRecursivo(raiz, chave);
     }
 
+    /**
+     * Busca um nó na árvore AVL com a chave fornecida.
+     *
+     * @param chave a chave do nó a ser buscado
+     * @return true se a chave for encontrada, false caso contrário
+     */
     private NodoAVL inserirRecursivo(NodoAVL atual, int chave) {
         if (atual == null) {
             return new NodoAVL(chave);

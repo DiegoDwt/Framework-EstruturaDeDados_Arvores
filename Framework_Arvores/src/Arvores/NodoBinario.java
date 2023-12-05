@@ -1,5 +1,11 @@
 package Arvores;
 
+/**
+ * Classe para representar um nó em uma árvore binária.
+ *
+ * @author Diego Dal Witt
+ * @version 1.0
+ */
 public class NodoBinario implements Nodo {
 	
     private int dado;
@@ -7,7 +13,11 @@ public class NodoBinario implements Nodo {
     private static Nodo raiz; 
     
 
-    
+    /**
+     * Construtor para criar um novo nó binário.
+     *
+     * @param dado o dado a ser armazenado no nó
+     */
     public NodoBinario(int dado) {
         this.dado = dado;
         dir = esq = null;
@@ -37,6 +47,11 @@ public class NodoBinario implements Nodo {
 		this.esq = esq;
 	}
 
+	  /**
+	   * Adiciona um novo nó à árvore binária.
+	   *
+	   * @param nodo o novo nó a ser adicionado
+	   */
 	 public void addNodo(Nodo nodo) {
 	      if (nodo == null) {
 	          throw new IllegalArgumentException("Nodo não pode ser nulo");
@@ -63,7 +78,11 @@ public class NodoBinario implements Nodo {
 	      }
 	  }
 	 
-	 
+	 /**
+	   * Remove um nó da árvore binária.
+	   *
+	   * @param nodo o nó a ser removido
+	   */
 	 public void removeNodo(Nodo nodo) {
 	      if (nodo == null) {
 	          throw new IllegalArgumentException("Nodo não pode ser nulo");

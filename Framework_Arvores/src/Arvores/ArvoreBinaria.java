@@ -1,12 +1,26 @@
 package Arvores;
 
+/**
+ * Classe para representar uma árvore binária.
+ *
+ * @author Diego Dal Witt
+ * @version 1.0
+ */
 public class ArvoreBinaria implements Arvore {
     private Nodo raiz;
 
+    /**
+     * Construtor para criar uma nova árvore binária.
+     */
     public ArvoreBinaria() {
         raiz = null;
     }
 
+    /**
+     * Insere um novo nó na árvore binária com a chave fornecida.
+     *
+     * @param chave a chave do novo nó
+     */
     @Override
     public void inserir(int chave) {
         raiz = inserirRecursivo(raiz, chave);
@@ -26,6 +40,12 @@ public class ArvoreBinaria implements Arvore {
         return atual;
     }
 
+    /**
+     * Busca um nó na árvore binária com a chave fornecida.
+     *
+     * @param chave a chave do nó a ser buscado
+     * @return true se a chave for encontrada, false caso contrário
+     */
     @Override
     public boolean buscar(int chave) {
         return buscarRecursivo(raiz, chave);
